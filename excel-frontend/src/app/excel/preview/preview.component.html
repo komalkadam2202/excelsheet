@@ -1,0 +1,67 @@
+<div class="container">
+
+  <h2 class="heading">Employee Excelsheet</h2>
+  <!-- <button type="button" class="btn btn-primary quick" routerLink="/quick">QuickAdd
+  </button>
+    <button type="button" routerLink="/add" class="btn btn-primary float-right">Add Employee</button> -->
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Sr.No</th>
+        <th scope="col">Employee code </th>
+        <th scope="col">Manager code</th>
+        <th scope="col">Manager Name</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody class="table-wrapper">
+      <tr *ngFor = "let item of datas1; let i = index" >
+        <td scope="row">  {{ i + 1 }}</td>
+        <td>{{item.emp_code}}</td>
+        <td>{{item.mang_code}}</td>
+        <div *ngFor=" let items of datas2">
+           <td *ngIf="item.mang_code === items.Emp_code">{{items.fname}}</td>
+        </div>
+        <td>{{item.Fname}}</td>
+        <td>{{item.Lname}}</td>
+        <td>{{item.Email}}</td>
+        <td>{{item.Status}}</td>
+      </tr>
+    </tbody>
+  </table> 
+ 
+
+
+  <!-- <h2 class="heading">Manager Excelsheet</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+          <th scope="col">Sr.No</th>
+        <th scope="col">Employee code</th>
+        
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody class="table-wrapper">
+      <tr *ngFor = "let item of datas2; let i = index" >
+        <td scope="row">  {{ i + 1 }}</td>
+        <td>{{item.Emp_code}}</td>
+        <td>{{item.fname}}</td>
+        <td>{{item.Lname}}</td>
+        <td>{{item.Email}}</td>
+        <td>{{item.Status}}</td>
+      </tr>
+    </tbody>
+  </table>  -->
+
+  <button type="button" (click)="submitExcel()" class="btn btn-primary float-right confirm-btn">Confirm</button> 
+  <button type="button" (click)="deleteExcel()" class="btn btn-primary float-right">Cancel</button> 
+</div>

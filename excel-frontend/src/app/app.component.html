@@ -1,0 +1,38 @@
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#"> Excel File</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto clearfix">
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">uploads</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/download">Download</a>
+        </li>
+       
+      </ul>
+    </div>
+  </nav>
+</header>
+<!-- Begin page content -->
+<main role="main" class="main flex-shrink-0">
+  <div class="container">
+   <router-outlet></router-outlet>
+  
+  </div>
+</main>
+<!-- 
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <span class="text-muted">Place sticky footer content here.</span>
+  </div>
+</footer> -->
+
